@@ -13,7 +13,7 @@ export default function Character() {
   if (loading) return <Loading />;
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center h-full">
       <img
         className="h-[250px] w-[250px] rounded-lg"
         src={data.character.image}
