@@ -30,13 +30,22 @@ export default function Search() {
 
   return (
     <div>
-      <input
-        value={name}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      />
-      <button onClick={() => getLocations()}>Search</button>
+      <div className="flex items-center justify-center">
+        <input
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+          placeholder="Character Location"
+          className="block w-[170px] md:w-[250px] rounded-md border-0 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 sm:text-sm sm:leading-6"
+        />
+        <button
+          className="ml-2 bg-white px-2 py-1 rounded-md"
+          onClick={() => getLocations()}
+        >
+          Search
+        </button>
+      </div>
       {loading && <div>Spinner...</div>}
       {error && <div>Something went wrong</div>}
       {data && (
