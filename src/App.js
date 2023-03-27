@@ -7,7 +7,7 @@ import Search from "./pages/searchComponent/Search";
 function App() {
   return (
     <div className="App">
-      <header className="bg-cyan-500 shadow mb-5">
+      <header className="bg-cyan-300 rounded-md sm:mx-5 sm:mt-2 shadow mb-5">
         <div className="mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-center">
           <Search />
         </div>

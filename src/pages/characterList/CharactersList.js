@@ -15,21 +15,21 @@ export default function CharactersList() {
       {data.characters.results.map((character) => {
         return (
           <div>
-            <Link to={`/${character.id}`}>
-              <div className="flex flex-col items-center">
-                <img
-                  className="h-[250px] w-[250px] rounded-lg"
-                  src={character.image}
-                  alt={character.name}
-                />
-                <div className="flex flex-col justify-center items-center mt-2">
-                  <h2>{character.name}</h2>
-                  <button className="bg-white rounded-md px-2 pb-1 ml-2 mt-1">
+            <div className="flex flex-col items-center">
+              <img
+                className="h-[250px] w-[250px] rounded-lg"
+                src={character.image}
+                alt={character.name}
+              />
+              <div className="flex flex-col justify-center items-center mt-2">
+                <h2>{character.name}</h2>
+                <Link to={`/${character.id}`}>
+                  <button className="bg-gray-200 rounded-md px-2 pb-1 ml-2 mt-1">
                     Read More...
                   </button>
-                </div>
+                </Link>
               </div>
-            </Link>
+            </div>
           </div>
         );
       })}
